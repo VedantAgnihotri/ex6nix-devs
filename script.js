@@ -4,5 +4,5 @@ const navLinks = document.querySelector('.nav-links')
             navLinks.classList.toggle('top-[9%]')
             navLinks.classList.toggle('shadow')
             navLinks.classList.toggle('text-cyan-600')
-            navLinks.classList.toggle('bg-cyan-950')
+            navLinks.classList.toggle('bg-sky-600')
         }
