@@ -66,7 +66,7 @@
   }
 }
 /* Main styles */
-body {
+.home-sec {
   color: #fff;
   background-color: #000 !important ;
   text-align: center;
@@ -84,4 +84,8 @@ body {
   -moz-animation-timing-function: linear;
   -o-animation-timing-function: linear;
   animation-timing-function: linear;
+  overflow-x: hidden;
+}
+*{
+  overflow-x: hidden;
 }
