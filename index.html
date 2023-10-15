@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ex6nix Developers</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gruppo&family=Montserrat:wght@600&family=Pixelify+Sans&family=Poppins:wght@400;700&family=Space+Grotesk&display=swap"
+        rel="stylesheet">
+    <title>ex6nix devs</title>
+    <link rel="stylesheet" href="input.css">
 </head>
-<body onload='window.location.replace("../src/index.html");'>
-    
+
+<body class="font-[Montserrat]">
+    <!--Navbar-->
+    <div id="" class="overflow-hidden h-screen">
+        <header class="bg-gradient-to-r from-black to-gray-800">
+            <nav class="flex justify-between items-center w-[92%]  mx-auto">
+                <div>
+                    <a href="#" class="flex items-center">
+                        
+                        <span
+                            class="self-center sm:text-2xl font-semibold whitespace-nowrap dark:text-white text-black overflow-hidden font-poppins xl:3xl xs:text-base">ex6nix
+                            Developers</span>
+                    </a>
+                </div>
+                <div
+                    class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] bg-black md:bg-transparent left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                        <li>
+                            <a class="hover:text-gray-500 text-xl text-white" href="#">Home</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-gray-500 text-xl text-white" href="#">Work</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-gray-500 text-xl text-white" href="#">Service</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-6">
+                    <ion-icon onclick="onToggleMenu(this)" name="menu"
+                        class="text-3xl text-white cursor-pointer md:hidden"></ion-icon>
+                </div>
+        </header>
+        <script src="script.js"></script>
 </body>
+
 </html>
