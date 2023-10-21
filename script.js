@@ -17,7 +17,7 @@ function theme_change(e) {
 }
 
 var typed = new Typed(".typing", {
-    strings: ["Business.", "Portfolio."],
+    strings: ["Business.", "Portfolio.", "Store.", "Resume."],
     typeSpeed: 80,
     backSpeed: 80,
     loop: true
