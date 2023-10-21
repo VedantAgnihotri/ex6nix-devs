@@ -15,3 +15,10 @@ function theme_change(e) {
         darkMode: 'class',
     }
 }
+
+var typed = new Typed(".typing", {
+    strings: ["Business.", "Portfolio."],
+    typeSpeed: 80,
+    backSpeed: 80,
+    loop: true
+});

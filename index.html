@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="output.css" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
     <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -13,13 +13,14 @@
         href="https://fonts.googleapis.com/css2?family=Gruppo&family=Montserrat:wght@600&family=Pixelify+Sans&family=Poppins:wght@400;700&family=Space+Grotesk&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <title>ex6nix devs</title>
 </head>
 
 <body class="font-[Montserrat] bg-black">
     <!--Navbar-->
     <div id="" class="overflow-hidden h-screen">
-        <header class="">
+        <header class="mt-2 bg-black">
             <nav class="flex items-center justify-between mx-auto">
                 <div>
                     <a href="#" class="flex items-center"> 
@@ -33,31 +34,33 @@
                     class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] bg-black md:bg-transparent top-[-100%] md:w-auto w-full flex items-center px-5">
                     <ul class="flex md:right-0 md:flex-row flex-col md:items-center md:gap-[2vw] gap-8">
                         <li>
-                            <a class="text-xl text-white hover:text-yellow-300" href="#">Home</a>
+                            <a class="text-xl text-white hover:text-yellow-400" href="#">Home</a>
                         </li>
                         <li>
-                            <a class="text-xl text-white hover:text-yellow-300" href="#">About</a>
+                            <a class="text-xl text-white hover:text-yellow-400" href="#">About</a>
                         </li>
                         <li>
-                            <a class="text-xl text-white hover:text-yellow-300" href="#">Work</a>
+                            <a class="text-xl text-white hover:text-yellow-400" href="#">Work</a>
                         </li>
                         <li>
-                            <a class="text-xl text-white hover:text-yellow-300" href="#">Service</a>
+                            <a class="text-xl text-white hover:text-yellow-400" href="#">Service</a>
                         </li>
                        
                     </ul>
                 </div>
                 <div class="flex items-center gap-6">
+                    <ion-icon onclick="" name="sunny"
+                        class="text-3xl md:mr-10 text-yellow-400 cursor-pointer"></ion-icon>
                     <ion-icon onclick="onToggleMenu(this)" name="menu"
-                        class="text-3xl text-white cursor-pointer md:hidden"></ion-icon>
+                        class="text-3xl mr-3 text-white cursor-pointer md:hidden"></ion-icon>
                 </div>
         </header>
 
         <section class="bg-black" id="home">
-            <div>
-                <h1 class="title--1 text-white">
-                    Get the <span class="text-[#ffea00]">Number 1</span> Website with us.
-                </h1>
+            <div class="flex items-center text-white mt-[200px]">
+                <div class="text-5xl ml-2  md:text-7xl lg:text-9xl font-bold">
+                    Get the Best Webpage for your <span class="typing text-yellow-400 font-bold"></span>
+                </div>
             </div>
         </section>
         <script src="script.js"></script>
