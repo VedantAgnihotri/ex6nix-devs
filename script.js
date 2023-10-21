@@ -8,7 +8,7 @@ const theme_btn = document.querySelector('.theme_btn')
 
 var typed = new Typed(".typing", {
     strings: ["Business.", "Portfolio.", "Store.", "Resume."],
-    typeSpeed: 80,
+    typeSpeed: 100,
     backSpeed: 80,
     loop: true
 });

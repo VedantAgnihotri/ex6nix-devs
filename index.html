@@ -22,16 +22,36 @@
         tailwind.config = {
             darkMode: 'class',
         }
-    </script>      
+
+    </script>
+
+<style type="text/tailwindcss">
+    @layer utilities {
+        .mesh-bg{
+background-color:hsla(0,0%,0%,1);
+background-image:
+radial-gradient(at 90% 77%, hsla(52,98%,77%,0.1) 0px, transparent 50%),
+radial-gradient(at 3% 23%, hsla(50,98%,64%,0.1) 0px, transparent 50%);
+}
+
+.mesh-bg-white{
+background-color:white;
+background-image:
+radial-gradient(at 90% 77%, hsla(52,98%,77%,0.25) 0px, transparent 50%),
+radial-gradient(at 3% 23%, hsla(50,98%,64%,0.25) 0px, transparent 50%);
+
+}
+    }
+  </style>
 </head>
 
-<body class="font-[Montserrat] dark:bg-black bg-white">
+<body class="font-[Montserrat]">
     <!--Navbar-->
-    <div id="" class="overflow-hidden h-screen bg-white dark:bg-black">
-        <header class="mt-2 bg-white dark:bg-black">
+    <div id="" class="h-screen mesh-bg-white dark:mesh-bg">
+        <header class="pt-2  ">
             <nav class="flex items-center justify-between mx-auto">
                 <div>
-                    <a href="#" class="flex items-center"> 
+                    <a href="#" class="flex items-center">
                         <img src="logo.svg" width="50px" height="50px">
                         <span
                             class="self-center sm:text-2xl font-semibold whitespace-nowrap dark:text-white text-black overflow-hidden font-poppins xl:3xl xs:text-base">ex6nix
@@ -39,41 +59,64 @@
                     </a>
                 </div>
                 <div
-                    class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] bg-black md:bg-transparent top-[-100%] md:w-auto w-full flex items-center px-5">
-                    <ul class="flex md:right-0 md:flex-row flex-col md:items-center md:gap-[2vw] gap-8">
+                    class="nav-links duration-500 lg:static absolute lg:min-h-fit min-h-[60vh] lg:bg-transparent top-[-100%] lg:w-auto w-full flex items-center px-5">
+                    <ul class="flex lg:right-0 lg:flex-row flex-col lg:items-center lg:gap-[2vw] gap-8">
                         <li>
-                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400" href="#">Home</a>
+                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400"
+                                href="#home">Home</a>
                         </li>
                         <li>
-                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400" href="#">About</a>
+                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400"
+                                href="#about">About</a>
                         </li>
                         <li>
-                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400" href="#">Work</a>
+                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400"
+                                href="#">Work</a>
                         </li>
                         <li>
-                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400" href="#">Service</a>
+                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400"
+                                href="#">Service</a>
                         </li>
-                       
+
                     </ul>
                 </div>
                 <div class="flex items-center gap-6">
                     <button id="theme-toggle" type="button" class="rounded-lg text-2xl p-2.5">
-                        <svg id="theme-toggle-dark-icon" class="hidden w-8 h-8 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                        <svg id="theme-toggle-light-icon" class="hidden w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        <svg id="theme-toggle-dark-icon" class="hidden w-8 h-8 text-black" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-8 h-8 text-yellow-400" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
                     </button>
                     <ion-icon onclick="onToggleMenu(this)" name="menu"
-                        class="text-3xl mr-3 text-black dark:text-white cursor-pointer md:hidden"></ion-icon>
+                        class="text-3xl mr-3 text-black dark:text-white cursor-pointer lg:hidden"></ion-icon>
                 </div>
         </header>
 
-        <section class="dark:bg-black bg-white" id="home">
-            <div class="flex items-center dark:text-white text-black pt-[200px]">
-                <div class="text-5xl ml-2 px-8  md:text-7xl lg:text-8xl font-bold">
-                    Get the Best Webpage for your <span class="typing text-yellow-500 dark:text-yellow-400 font-bold"></span>
+        <section class="  h-[90%]" id="home">
+            <div class="flex md:items-center dark:text-white text-black md:pt-[200px] pt-[150px]">
+                <div class="text-4xl ml-2 px-8 mb-10 md:text-7xl lg:text-8xl font-bold">
+                    Get the Best Webpage for your <span
+                        class="typing text-yellow-500 dark:text-yellow-400 font-bold"></span>
                 </div>
+
             </div>
+
+            <div class="flex justify-center absolute top-[82%] w-full">
+                <a
+                    class="px-2 py-2 md:px-5 md:py-5 mt-10 bg-yellow-400 hover: rounded-lg duration-500 ml-2 cursor-pointer md:text-2xl text-center hover:text-yellow-400 text-white">
+                    See our services
+                </a>
+            </div>
+
         </section>
-        <script src="script.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
