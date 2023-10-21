@@ -6,16 +6,6 @@ const navLinks = document.querySelector('.nav-links')
 
 const theme_btn = document.querySelector('.theme_btn')
 
-
-function theme_change(e) {
-    e.name = e.name === 'sunny' ? 'moon' : 'sunny'
-    document.body.classList.toggle('dark')
-    localStorage.setItem('theme','dark')
-    tailwind.config = {
-        darkMode: 'class',
-    }
-}
-
 var typed = new Typed(".typing", {
     strings: ["Business.", "Portfolio.", "Store.", "Resume."],
     typeSpeed: 80,
@@ -23,8 +13,10 @@ var typed = new Typed(".typing", {
     loop: true
 });
 
+
 var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
 
 // Change the icons inside the button based on previous settings
 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -33,8 +25,15 @@ if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localS
     themeToggleDarkIcon.classList.remove('hidden');
 }
 
+
 var themeToggleBtn = document.getElementById('theme-toggle');
 
+if (localStorage.getItem('color-theme') === 'light') {
+    document.documentElement.classList.remove('dark');
+} 
+else {
+    document.documentElement.classList.add('dark');
+}
 themeToggleBtn.addEventListener('click', function() {
 
     // toggle icons inside button
@@ -46,7 +45,8 @@ themeToggleBtn.addEventListener('click', function() {
         if (localStorage.getItem('color-theme') === 'light') {
             document.documentElement.classList.add('dark');
             localStorage.setItem('color-theme', 'dark');
-        } else {
+        } 
+        else {
             document.documentElement.classList.remove('dark');
             localStorage.setItem('color-theme', 'light');
         }
