@@ -45,21 +45,21 @@ radial-gradient(at 3% 23%, hsla(50,98%,64%,0.25) 0px, transparent 50%);
   </style>
 </head>
 
-<body class="font-[Montserrat]">
+<body class="font-[Montserrat] duration-500">
     <!--Navbar-->
     <div id="" class="h-screen mesh-bg-white dark:mesh-bg">
         <header class="">
             <nav class="pt-2 flex items-center justify-between mx-auto dark:bg-black bg-white lg:bg-transparent dark:lg:bg-transparent">
                 <div>
                     <a href="#" class="flex items-center">
-                        <img src="logo.svg" width="50px" height="50px">
+                        <img src="logo.svg" class="lg:h-16 w-16 md:h-12 md:w-12 sm:h-10 sm:w-10 h-8 w-8">
                         <span
                             class="self-center sm:text-2xl font-semibold whitespace-nowrap dark:text-white text-black overflow-hidden font-poppins xl:3xl xs:text-base">ex6nix
                             Developers</span>
                     </a>
                 </div>
                 <div
-                    class="dark:bg-black bg-white nav-links duration-500 lg:static absolute lg:min-h-fit min-h-[60vh] lg:bg-transparent top-[-100%] lg:w-auto w-full flex items-center px-5">
+                    class="dark:bg-black bg-white nav-links lg:duration-0 duration-500 lg:static absolute lg:min-h-fit min-h-[60vh] lg:bg-transparent top-[-100%] lg:w-auto w-full flex items-center px-5">
                     <ul class="flex lg:right-0 lg:flex-row flex-col lg:items-center lg:gap-[2vw] gap-8">
                         <li>
                             <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400"
@@ -80,8 +80,8 @@ radial-gradient(at 3% 23%, hsla(50,98%,64%,0.25) 0px, transparent 50%);
 
                     </ul>
                 </div>
-                <div class="flex items-center gap-6">
-                    <button id="theme-toggle" type="button" class="rounded-lg text-2xl p-2.5">
+                <div class="flex items-center gap-4 md:gap-6">
+                    <button id="theme-toggle" type="button" class="rounded-lg text-xl  sm:text-2xl p-2.5">
                         <svg id="theme-toggle-dark-icon" class="hidden w-8 h-8 text-black" fill="currentColor"
                             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
