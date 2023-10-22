@@ -19,7 +19,8 @@ radial-gradient(at 3% 23%, hsla(50,98%,64%,0.1) 0px, transparent 50%);
       }
       
       body, html{
-        overflow: overlay !important;
+        overflow-x: hidden;
+
       }
 
     ::-webkit-scrollbar {
@@ -43,4 +44,69 @@ radial-gradient(at 3% 23%, hsla(50,98%,64%,0.1) 0px, transparent 50%);
       ::-webkit-scrollbar-corner{
         border-radius: 10px;
       }
-    
+
+
+      .horizontalScroll {
+        width: 100vh;
+        height: 100vw;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: #2E2E2E;
+        padding: 30px;
+        -webkit-transform-origin: right top;
+                transform-origin: right top;
+        -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0);
+                transform: rotate(-90deg) translate3d(0, -100vh, 0);
+      }
+      .horizontalScroll > * {
+        -webkit-transform-origin: left top;
+                transform-origin: left top;
+        -webkit-transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+                transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+      }
+
+      .horizontalScroll::-webkit-scrollbar-thumb{
+        display: none;
+      }
+      .item {
+        width: calc(100vh - 60px);
+        height: calc(100vh - 60px);
+        background: #FDFFFC;
+        position: relative;
+      }
+      .item:not(:first-child) {
+        margin-top: 30px;
+      }
+      .item .bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: no-repeat center center / cover;
+        opacity: .8;
+        background-blend-mode: luminosity;
+      }
+      
+      /* Demo Purpose Only*/
+      .demo {
+        font-family: 'Raleway', sans-serif;
+        color:#fff;
+          display: block;
+          margin: 0 auto;
+          padding: 15px 0;
+          text-align: center;
+      }
+      .demo a{
+        font-family: 'Raleway', sans-serif;
+      color: #2ecc71;		
+      }
+      h3{
+        font-family: 'Raleway', sans-serif;
+        color:#fff;
+          display: block;
+          margin: 0 auto;
+          padding: 15px 0;
+          text-align: center;  
+      }
+      
