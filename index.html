@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
@@ -25,8 +26,8 @@
 
     </script>
 
-<style type="text/tailwindcss">
-    @layer utilities {
+    <style type="text/tailwindcss">
+        @layer utilities {
         .mesh-bg{
 background-color:hsla(0,0%,0%,1);
 background-image:
@@ -44,15 +45,16 @@ radial-gradient(at 3% 23%, hsla(50,98%,64%,0.25) 0px, transparent 50%);
     }
   </style>
 
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
+    </script>
 </head>
 
-<body class="font-[Montserrat] duration-500">
+<body class="font-[Montserrat] mesh-bg-white dark:mesh-bg duration-500">
     <!--Navbar-->
-    <div id="" class="h-screen mesh-bg-white dark:mesh-bg parallax">
+    <div id="" class="overflow-hidden h-screen">
         <header class="">
-            <nav class="pt-2 flex items-center justify-between mx-auto dark:bg-black bg-white lg:bg-transparent dark:lg:bg-transparent">
+            <nav
+                class="pt-2 flex items-center justify-between mx-auto dark:bg-black bg-white lg:bg-transparent dark:lg:bg-transparent">
                 <div>
                     <a href="#" class="flex items-center">
                         <img src="logo.svg" class="lg:h-16 w-16 md:h-12 md:w-12 sm:h-10 sm:w-10 h-8 w-8">
@@ -102,8 +104,8 @@ radial-gradient(at 3% 23%, hsla(50,98%,64%,0.25) 0px, transparent 50%);
         </header>
 
         <section class="h-[90%]" id="home">
-            <div class="flex md:items-center dark:text-white text-black md:pt-[200px] pt-[150px]">
-                <div class="text-4xl ml-2 px-8 mb-10 md:text-7xl lg:text-8xl font-bold" data-scroll="">
+            <div class="flex overflow-hidden md:items-center dark:text-white text-black md:pt-[200px] pt-[150px]">
+                <div class="text-4xl ml-2 px-8 mb-5 md:text-7xl lg:text-8xl font-bold" data-scroll="">
                     Get the Best Webpage for your <span
                         class="typing text-yellow-500 dark:text-yellow-400 font-bold"></span>
                 </div>
@@ -112,34 +114,111 @@ radial-gradient(at 3% 23%, hsla(50,98%,64%,0.25) 0px, transparent 50%);
 
             <div class="flex justify-center absolute top-[82%] w-full">
                 <a
-                    class="px-2 py-2 md:px-5 md:py-5 mt-10 bg-yellow-400 hover:bg-white rounded-lg duration-500 ml-2 cursor-pointer md:text-2xl text-center hover:text-yellow-400 text-white">
+                    class="px-2 py-2 md:px-5 md:py-5 bg-yellow-400 hover:bg-black hover:text-yellow-400 text-black dark:hover:bg-white rounded-lg duration-500 ml-2 cursor-pointer md:text-2xl text-center dark:hover:text-yellow-400 dark:text-white">
                     See our services
                 </a>
             </div>
         </section>
     </div>
 
-    <div class="horizontalScroll">
-        <div class="item">
-          <div class="bg" style="background-image: url(https://images.unsplash.com/photo-1468014187448-46f9ba8890a2?dpr=1&auto=compres)"></div>
+    <section id="about">
+        <div>
+            <h1 class="text-[50px] md:text-[80px] text-black dark:text-white text-center">
+                Meet the <span class="text-yellow-400">team</span>
+            </h1>
+            <p class="px-4 pt-2 pb-5 text-yellow-400 text-center text-[17px] md:text-[30px] font-light">
+                With over 6 years of combined experience, we've got a well-seasoned team at the helm.
+            </p>
         </div>
-        <div class="item">
-          <div class="bg" style="background-image: url(https://images.unsplash.com/photo-1466496224275-4cbf790b285b?dpr=1&auto=compres)"></div>
-        </div>
-        <div class="item">
-          <div class="bg" style="background-image: url(https://images.unsplash.com/photo-1437315306147-0923bdb3fc12?dpr=1&auto=compress)"></div>
-        </div>
-        <div class="item">
-          <div class="bg" style="background-image: url(https://images.unsplash.com/44/C3EWdWzT8imxs0fKeKoC_blackforrest.JPG?dpr=1&auto)"></div>
-        </div>
-        <div class="item">
-          <div class="bg" style="background-image: url(https://images.unsplash.com/photo-1481093903765-de0b1d88f1a5?dpr=1&auto=compres)"></div>
-        </div>
-        <div class="item">
-          <div class="bg" style="background-image: url(https://images.unsplash.com/photo-1480914362564-9f2c2634e266?dpr=1&auto=compress)"></div>
-        </div>
-      </div>
-      
+        <div class="flex flex-wrap">
+            <!-- Member #1 -->
+            <div class="w-full md:w-1/2 lg:w-1/2 mb-6 px-6 sm:px-6 lg:px-10">
+                <div class="flex flex-col">
+                    <!-- Avatar -->
+                    <a href="#" class="mx-auto">
+                        <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                            src="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80">
+                    </a>
+
+                    <!-- Details -->
+                    <div class="text-center">
+                        <!-- Name -->
+                        <h1 class="text-yellow-400 mt-2 text-xl font-bold mb-1">
+                            Vedant Agnihotri
+                        </h1>
+
+                        <!-- Title -->
+                        <div class="text-black dark:text-gray-500 font-light mb-2">
+                            Co-Founder & Specialist
+                        </div>
+
+                        <!-- Social Icons -->
+                        <div class="flex items-center justify-center opacity-70 hover:opacity-100
+                    transition-opacity duration-300">
+
+
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/vedxnt_a/" target="_blank" class="flex rounded-full hover:text-yellow-500 h-[50px] w-[50px]">
+                                <ion-icon name="logo-instagram"
+                                    class="text-black dark:text-white mx-auto  h-[30px] w-[30px]"></ion-icon>
+                            </a>
+                            <!-- Github -->
+                            <a href="https://github.com/VedantAgnihotri" target="_blank" class="flex rounded-full hover:text-yellow-500 h-[50px] w-[50px]">
+                                <ion-icon name="logo-github"
+                                    class="text-black dark:text-white mx-auto  h-[30px] w-[30px]"></ion-icon>
+                            </a>
+                            <a href="https://discordapp.com/users/587204069408636929" target="_blank" class="flex rounded-full hover:text-yellow-500 h-[50px] w-[50px]">
+                                <ion-icon name="logo-discord"
+                                    class="text-black dark:text-white mx-auto  h-[30px] w-[30px]"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/2 mb-6 px-6 sm:px-6 lg:px-10">
+                <div class="flex flex-col">
+                    <!-- Avatar -->
+                    <a href="#" class="mx-auto">
+                        <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                            src="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80">
+                    </a>
+
+                    <!-- Details -->
+                    <div class="text-center">
+                        <!-- Name -->
+                        <h1 class="text-yellow-400 mt-2 text-xl font-bold mb-1">
+                            Vedant Agnihotri
+                        </h1>
+
+                        <!-- Title -->
+                        <div class="text-black dark:text-gray-500 font-light mb-2">
+                            Co-Founder & Specialist
+                        </div>
+
+                        <!-- Social Icons -->
+                        <div class="flex items-center justify-center opacity-70 hover:opacity-100
+                    transition-opacity duration-300">
+
+
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/vedxnt_a/" target="_blank" class="flex rounded-full hover:text-yellow-500 h-[50px] w-[50px]">
+                                <ion-icon name="logo-instagram"
+                                    class="text-black dark:text-white mx-auto  h-[30px] w-[30px]"></ion-icon>
+                            </a>
+                            <!-- Github -->
+                            <a href="https://github.com/VedantAgnihotri" target="_blank" class="flex rounded-full hover:text-yellow-500 h-[50px] w-[50px]">
+                                <ion-icon name="logo-github"
+                                    class="text-black dark:text-white mx-auto  h-[30px] w-[30px]"></ion-icon>
+                            </a>
+                            <a href="https://discordapp.com/users/587204069408636929" target="_blank" class="flex rounded-full hover:text-yellow-500 h-[50px] w-[50px]">
+                                <ion-icon name="logo-discord"
+                                    class="text-black dark:text-white mx-auto  h-[30px] w-[30px]"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
     <script src="script.js"></script>
 </body>
 
