@@ -43,11 +43,22 @@ radial-gradient(at 3% 23%, hsla(50,98%,64%,0.25) 0px, transparent 50%);
 }
     }
   </style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+<script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous"></script>
+<script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous"></script>
+<script src="locomotive-scroll.min.js"></script>
+<script>
+    (function () {
+        var scroll = new LocomotiveScroll();
+    })();
+</script>
 </head>
 
-<body class="font-[Montserrat] duration-500">
+<body class="font-[Montserrat] duration-500" smooth>
     <!--Navbar-->
-    <div id="" class="h-screen mesh-bg-white dark:mesh-bg">
+    <div id="" class="h-screen mesh-bg-white dark:mesh-bg" data-scroll-container>
         <header class="">
             <nav class="pt-2 flex items-center justify-between mx-auto dark:bg-black bg-white lg:bg-transparent dark:lg:bg-transparent">
                 <div>
@@ -98,9 +109,9 @@ radial-gradient(at 3% 23%, hsla(50,98%,64%,0.25) 0px, transparent 50%);
                 </div>
         </header>
 
-        <section class="  h-[90%]" id="home">
+        <section class="h-[90%]" id="home" data-scroll-section>
             <div class="flex md:items-center dark:text-white text-black md:pt-[200px] pt-[150px]">
-                <div class="text-4xl ml-2 px-8 mb-10 md:text-7xl lg:text-8xl font-bold">
+                <div class="text-4xl ml-2 px-8 mb-10 md:text-7xl lg:text-8xl font-bold" data-scroll>
                     Get the Best Webpage for your <span
                         class="typing text-yellow-500 dark:text-yellow-400 font-bold"></span>
                 </div>
@@ -113,9 +124,9 @@ radial-gradient(at 3% 23%, hsla(50,98%,64%,0.25) 0px, transparent 50%);
                     See our services
                 </a>
             </div>
-
         </section>
     </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script src="script.js"></script>
 </body>
 

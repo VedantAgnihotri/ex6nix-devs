@@ -12,3 +12,35 @@ radial-gradient(at 3% 23%, hsla(50,98%,64%,0.1) 0px, transparent 50%);
     radial-gradient(at 3% 23%, hsla(50,98%,64%,0.05) 0px, transparent 50%);
     
     }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+      }
+      
+      body, html{
+        overflow: overlay !important;
+      }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        background: transparent;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: transparent;
+        display: none;
+
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #facc15;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-corner{
+        border-radius: 10px;
+      }
+    
