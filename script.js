@@ -92,4 +92,9 @@ const observer = new IntersectionObserver(entries => {
   
   observer.observe(document.querySelector('.animate_team'));
   
-  
+ function matica(){
+    window.open("https://rrs12.github.io/matica/");
+ } 
+ function digimics(){
+    window.open("https://rrs12.github.io/digimics/");
+ } 
