@@ -55,6 +55,13 @@
      animation-delay: var(--animate-delay)
  }
 
+ .animate__animated.animate__delay-250ms {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+    -webkit-animation-delay: var(--animate-delay)*1/4;
+    animation-delay: var(--animate-delay)*1/4
+}
+
  .animate__animated.animate__delay-2s {
      -webkit-animation-delay: 2s;
      animation-delay: 2s;
