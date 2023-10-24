@@ -91,7 +91,7 @@ const observer = new IntersectionObserver(entries => {
   });
   
   observer.observe(document.querySelector('.animate_team'));
-  
+
  function matica(){
     window.open("https://rrs12.github.io/matica/");
  } 
@@ -106,8 +106,8 @@ const observer = new IntersectionObserver(entries => {
         message: document.getElementById("message").value,
     }
 
-    const ServiceID= "service_k9p25sr"
-    const templateID="template_hyjb9x7"
+    const ServiceID= "service_q2gmcvn"
+    const templateID="template_cn62vo6"
    
     emailjs.send(ServiceID,templateID, params)
     .then(
@@ -122,4 +122,3 @@ const observer = new IntersectionObserver(entries => {
     )
     .catch((err) => console.log(err))
  }
-
