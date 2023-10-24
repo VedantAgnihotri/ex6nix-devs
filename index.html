@@ -52,6 +52,8 @@ radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.159) 0px, transparent 50%);
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
     </script>
+
+<link rel="stylesheet" href="animate.css">
 </head>
 
 <body class="font-[Montserrat] mesh-bg-white dark:mesh-bg duration-500">
@@ -123,7 +125,7 @@ radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.159) 0px, transparent 50%);
 
             <div class="flex justify-center absolute top-[82%] w-full">
                 <a
-                    class="px-2 py-2 md:px-5 md:py-5 bg-yellow-400 hover:bg-black hover:text-yellow-400 text-black dark:hover:bg-white rounded-lg duration-500 ml-2 cursor-pointer md:text-2xl text-center dark:hover:text-yellow-400 dark:text-white">
+                    class="animate__animated animate__infinite animate__pulse px-2 py-2 md:px-5 md:py-5 bg-yellow-400 hover:bg-black hover:text-yellow-400 text-black dark:hover:bg-white rounded-lg duration-500 ml-2 cursor-pointer md:text-2xl text-center dark:hover:text-yellow-400 dark:text-white" href="#service">
                     See our services
                 </a>
             </div>
@@ -203,7 +205,7 @@ radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.159) 0px, transparent 50%);
         
     </section>
     <section class="justify-center pt-20" id="team">
-        <div class="mt-[70px]">
+        <div class="mt-[10px]">
             <h1 class="text-[40px] md:text-[80px] text-black dark:text-white text-center">
                 Meet the <span class="text-yellow-400">team.</span>
             </h1>
@@ -214,9 +216,9 @@ radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.159) 0px, transparent 50%);
         </div>
 
         <div>
-            <div class="flex md:flex-row flex-col">
+            <div class="flex md:flex-row flex-col animate_team">
                 <!-- Member #1 -->
-                <div class="w-full mb-6 px-6 sm:px-6 lg:px-10">
+                <div class="w-full mb-6 px-6 sm:px-6 lg:px-10 member-1">
                     <div class="flex flex-col">
                         <!-- Avatar -->
                         <div href="#" class="mx-auto hover:bg-[#518dff] bg-[#4891e0] rounded-2xl hover:mb-5 duration-500">
@@ -261,7 +263,8 @@ radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.159) 0px, transparent 50%);
                         </div>
                     </div>
                 </div>
-                <div class="w-full mb-6 px-6 sm:px-6 lg:px-10">
+
+                <div class="w-full mb-6 px-6 sm:px-6 lg:px-10 member-2">
                     <div class="flex flex-col">
                         <!-- Avatar -->
                         <div href="#" class="mx-auto hover:bg-[#fff1a6] bg-[#ffe6a6] rounded-2xl hover:mb-5 duration-500 pt-[65px]">
@@ -337,12 +340,12 @@ radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.159) 0px, transparent 50%);
         <div class="pt-8 px-4 mx-auto max-w-screen-xl lg:pt-16 lg:px-6">
             <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
                 <!-- Pricing Card -->
-                <div class="flex flex-col p-6 mx-auto max-w-lg text-center bg-transparent rounded-lg border border-gray-900 shadow dark:border-gray-600 xl:p-8 dark:bg-transparent dark:text-yellow-400">
+                <div class="flex flex-col p-6 mx-auto max-w-lg text-center duration-200 hover:border-yellow-500 dark:hover:border-yellow-300 bg-transparent rounded-lg border border-gray-900 shadow dark:border-gray-600 xl:p-8 dark:bg-transparent dark:text-yellow-400">
                     <h3 class="mb-4 text-2xl font-semibold">Starter</h3>
                     <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option for personal portfolios; includes a responsive webpage</p>
                     <div class="justify-center my-8">
                         <div class="mr-2 text-xs font-thin">Starting from</div>
-                        <div class="mr-2 text-5xl font-extrabold">₹1500</div>
+                        <div class="mr-2 text-5xl font-extrabold">₹1200 <span class="text-sm align-top ml-[-10px]">#</span></div>
                     </div>
                     <!-- List -->
                     <ul role="list" class="mb-8 space-y-4 dark:text-white text-left">
@@ -368,13 +371,47 @@ radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.159) 0px, transparent 50%);
                         </li>
                     </ul>
                 </div>
+
+                <!-- Pricing Card -->
+                <div class="flex flex-col p-6 mx-auto max-w-lg text-center bg-transparent rounded-lg border border-gray-900 shadow duration-200 hover:border-yellow-500 dark:hover:border-yellow-300 dark:border-gray-600 xl:p-8 dark:bg-transparent dark:text-yellow-400">
+                    <h3 class="mb-4 text-2xl font-semibold">Bussiness</h3>
+                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option for bussinesses; includes a multi-page responsive site</p>
+                    <div class="justify-center my-8">
+                        <div class="mr-2 text-xs font-thin">Starting from</div>
+                        <div class="mr-2 text-5xl font-extrabold">₹1700 <span class="text-sm align-top ml-[-10px]">#</span></div>
+                    </div>
+                    <!-- List -->
+                    <ul role="list" class="mb-8 space-y-4 dark:text-white text-left">
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Individual configuration</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>No setup, or hidden fees</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Premium support: <span class="font-semibold">2 months</span></span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Free updates: <span class="font-semibold">8 iterations</span></span>
+                        </li>
+                    </ul>
+                </div>
+
             <!-- Pricing Card -->
-            <div class="flex flex-col p-6 mx-auto max-w-lg text-center bg-transparent rounded-lg border border-gray-900 shadow dark:border-gray-600 xl:p-8 dark:bg-transparent dark:text-yellow-400">
+            <div class=" duration-200 hover:border-yellow-500 dark:hover:border-yellow-300 flex flex-col p-6 mx-auto max-w-lg text-center bg-transparent rounded-lg border border-gray-900 shadow dark:border-gray-600 xl:p-8 dark:bg-transparent dark:text-yellow-400">
                 <h3 class="mb-4 text-2xl font-semibold">E-commerce</h3>
                 <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Includes a multi-page, responsive & payment gateway included e-commerce website</p>
                 <div class="justify-center my-8">
                     <div class="mr-2 text-xs font-thin">Starting from</div>
-                    <div class="mr-2 text-5xl font-extrabold">₹4500</div>
+                    <div class="mr-2 text-5xl font-extrabold">₹4500 <span class="text-sm align-top ml-[-10px]">#</span></div>
                 </div>
                 <!-- List -->
                 <ul role="list" class="mb-8 space-y-4 dark:text-white text-left">
@@ -401,9 +438,12 @@ radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.159) 0px, transparent 50%);
                     </li>
                 </ul>
             </div>
+
+            
             </div>
             </div>
-            <p class="text-xs font-thin dark:text-white right-20 mt-10 w-full text-center md:text-right">* for more than 5 products there will be extra charges monthly.  &nbsp; <a href="e-commerce.html" class=" text-yellow-500 dark:text-yellow-400">Know more  &nbsp; </a> </p>
+            <p class="text-xs font-thin dark:text-white  mt-10 w-full px-5 text-left sm:text-right">* for more than 5 products there will be extra charges monthly.  &nbsp; <a href="e-commerce.html" class=" text-yellow-500 dark:text-yellow-400">Know more  &nbsp; </a> 
+            <br># please note that 10% of the final amount will be taken as an advance &nbsp;</p>
 
     </section>
     <script src="script.js"></script>

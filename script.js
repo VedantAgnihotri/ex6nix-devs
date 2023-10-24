@@ -71,3 +71,25 @@ function hide(){
     togglebtn.name = togglebtn.name === 'menu' ? 'close' : 'menu'
 
 }
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const member_1 = entry.target.querySelector('.member-1');
+      const member_2 = entry.target.querySelector('.member-2');
+    if(screen.width>=768){
+      if (entry.isIntersecting) {
+        member_1.classList.add('animate__animated','animate__fadeInLeft');
+        member_2.classList.add('animate__animated','animate__fadeInRight');
+        return; // if we added the class, exit the function
+      }
+    }
+      // We're not intersecting, so remove the class!
+      member_1.classList.remove('animate__animated','animate__fadeInLeft');
+      member_2.classList.remove('animate__animated','animate__fadeInRight');
+
+    });
+  });
+  
+  observer.observe(document.querySelector('.animate_team'));
+  
+  
