@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gruppo&family=Montserrat:wght@600&family=Pixelify+Sans&family=Poppins:wght@400;700&family=Space+Grotesk&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <title>ex6nix devs</title>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .mesh-bg{
+background-color:hsla(0,0%,0%,1);
+background-image:
+radial-gradient(at 90% 77%, hsla(52, 100%, 50%, 0.155) 0px, transparent 50%),
+radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.159) 0px, transparent 50%);
+background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.mesh-bg-white{
+background-color:white;
+background-image:
+radial-gradient(at 90% 77%, hsla(52, 100%, 50%, 0.155) 0px, transparent 50%),
+radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.159) 0px, transparent 50%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
+}
+    }
+  </style>
+
+  <style>
+/*Scroll bar nav*/
+#detailed-pricing::-webkit-scrollbar {
+    width: 1em;
+}
+
+/* Track */
+#detailed-pricing::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Handle */
+#detailed-pricing::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+  </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
+    </script>
+</head>
+
+<body class="font-[Montserrat] mesh-bg-white dark:mesh-bg duration-500">
+    <!--Navbar-->
+    <div id="" class="overflow-hidden h-screen">
+        <header class="w-full fixed dark:bg-black/75 bg-white/75 backdrop-blur z-50">
+            <nav
+                class="z-50 pt-2 flex items-center justify-between mx-auto dark:bg-black bg-white lg:bg-transparent dark:lg:bg-transparent">
+                <div>
+                    <a href="#" class="flex items-center">
+                        <img src="logo.svg" class="lg:h-16 w-16 md:h-12 md:w-12 sm:h-10 sm:w-10 h-8 w-8">
+                        <span
+                            class="self-center sm:text-2xl font-semibold whitespace-nowrap dark:text-white text-black overflow-hidden font-poppins xl:3xl xs:text-base">ex6nix
+                            Developers</span>
+                    </a>
+                </div>
+                <div
+                    class="hidden lg:block dark:bg-black bg-white lg:bg-transparent dark:lg:bg-transparent nav-links lg:duration-0 duration-500 lg:static absolute lg:min-h-fit min-h-[40vh] lg:bg-transparent top-[100%] lg:w-auto w-full flex items-center px-5">
+                    <ul class="flex lg:right-0 lg:flex-row flex-col lg:items-center lg:gap-[2vw] gap-8">
+                        <li>
+                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400"
+                                href="index.html#home" onclick="hide()">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400"
+                                href="index.html#about" onclick="hide()">About</a>
+                        </li>
+                        <li>
+                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400"
+                                href="index.html#team" onclick="hide()">Team</a>
+                        </li>
+                        <li>
+                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400"
+                                href="index.html#work" onclick="hide()">Work</a>
+                        </li>
+                        <li>
+                            <a class="text-xl text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400"
+                                href="index.html#service" onclick="hide()">Service</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-4 md:gap-6">
+                    <button id="theme-toggle" type="button" class="rounded-lg text-xl  sm:text-2xl p-2.5 px-2 sm:p-2.5">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-8 h-8 text-black" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-8 h-8 text-yellow-400" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <ion-icon onclick="onToggleMenu(this)" name="menu"
+                        class="text-3xl mr-3 text-black dark:text-white cursor-pointer lg:hidden toggle-btn"></ion-icon>
+                </div>
+        </header>
+
+        <section class="h-[90%] hidden" id="home">
+            <div class="flex overflow-hidden md:items-center dark:text-white text-black md:pt-[200px] pt-[150px]">
+                <div class="text-4xl sm:text-5xl ml-2 px-8 mb-5 md:text-7xl lg:text-8xl font-bold" data-scroll="">
+                    Get the Best Webpage for your <span
+                        class="typing text-yellow-500 dark:text-yellow-400 font-bold"></span>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center absolute top-[82%] w-full">
+                <a
+                    class="px-2 py-2 md:px-5 md:py-5 bg-yellow-400 hover:bg-black hover:text-yellow-400 text-black dark:hover:bg-white rounded-lg duration-500 ml-2 cursor-pointer md:text-2xl text-center dark:hover:text-yellow-400 dark:text-white">
+                    See our services
+                </a>
+            </div>
+
+        </section>
+<div id="detailed-pricing" class="w-full overflow-x-auto mt-20">
+    <div class="overflow-hidden min-w-max border">
+        <div class="grid grid-cols-5 p-4 text-sm font-medium text-gray-900 bg-gray-100 border-t border-b border-gray-200 gap-x-16 dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+            <div class="flex items-center">Features</div>
+            <div>Free</div>
+            <div>Venture</div>
+            <div>Business</div>
+            <div>Unlimited</div>
+
+        </div>
+        <div class="grid grid-cols-5 px-4 py-5 text-sm text-gray-700 border-b border-gray-200 gap-x-16 dark:border-gray-700">
+            <div class="text-gray-500 dark:text-gray-400">Monthly price</div>
+            <div class="dark:text-white">
+                ₹ 0
+            </div>
+            <div class="dark:text-white">
+                ₹ 889	
+            </div>
+            <div class="dark:text-white">
+                ₹ 1649	
+            </div>
+            <div class="dark:text-white">
+                ₹ 4990
+            </div>
+
+        </div>
+        <div class="grid grid-cols-5 px-4 py-5 text-sm text-gray-700 border-b border-gray-200 gap-x-16 dark:border-gray-700">
+            <div class="text-gray-500 dark:text-gray-400">Monthly price, paid annualy</div>
+            <div class="dark:text-white">
+                ₹ 0
+            </div>
+            <div class="dark:text-white">
+                ₹ 666.58
+            </div>
+            <div class="dark:text-white">
+                ₹ 1199.92	
+            </div>
+            <div class="dark:text-white">
+                ₹ 4000
+            </div>
+
+        </div>
+        <div class="grid grid-cols-5 px-4 py-5 text-sm text-gray-700 border-b border-gray-200 gap-x-16 dark:border-gray-700">
+            <div class="text-gray-500 dark:text-gray-400">Maximum products</div>
+            <div class="dark:text-white">
+                5
+            </div>
+            <div class="dark:text-white">
+                100
+            </div>
+            <div class="dark:text-white">
+                2500	
+            </div>
+            <div class="dark:text-white">
+                Unlimited
+            </div>
+
+        </div>
+        <div class="grid grid-cols-5 px-4 py-5 text-sm text-gray-700 border-b border-gray-200 gap-x-16 dark:border-gray-700">
+            <div class="text-gray-500 dark:text-gray-400">Discount Coupons</div>
+            <div>
+                <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+            </div>
+            <div>
+                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                </svg>
+            </div>
+
+            <div>
+                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                </svg>
+            </div>
+
+            <div>
+                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                </svg>
+            </div>
+
+        </div>
+        <div class="grid grid-cols-5 px-4 py-5 text-sm text-gray-700 border-b border-gray-200 gap-x-16 dark:border-gray-700">
+            <div class="text-gray-500 dark:text-gray-400">Inventory management	</div>
+            <div>
+                <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+            </div>
+            <div>
+                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                </svg>
+            </div>
+            
+            <div>
+                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                </svg>
+            </div>
+
+                        <div>
+                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                </svg>
+            </div>
+        </div>
+       <p class="text-xl font-bold dark:text-white w-full text-center py-4">There will be 70% for the first month and 25% discount if paid annually</p> 
+    </div>
+    <p class="text-xl mt-10 font-bold dark:text-white w-full text-center">Note: All these prices are additional to making fee and making fee is sought to be taken only once</p>
+
+</div>
+        
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
