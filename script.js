@@ -91,6 +91,23 @@ const observer = new IntersectionObserver(entries => {
   });
   
   observer.observe(document.querySelector('.animate_team'));
+  
+  const observer1 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const tools = entry.target.querySelector('.stack-tools');
+    if(screen.width>=768){
+      if (entry.isIntersecting) {
+        tools.classList.add('animate__animated','animate__lightSpeedInLeft',"animate__delay-250ms");
+        return; // if we added the class, exit the function
+      }
+    }
+      // We're not intersecting, so remove the class!
+      tools.classList.remove('animate__animated','animate__lightSpeedInLeft',"animate__delay-250ms");
+
+    });
+  });
+  
+  observer1.observe(document.querySelector('.tools'));
 
  function matica(){
     window.open("https://rrs12.github.io/matica/");
