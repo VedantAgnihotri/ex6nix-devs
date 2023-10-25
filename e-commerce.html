@@ -50,27 +50,28 @@ radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.221) 0px, transparent 50%);
     }
   </style>
 
-  <style>
-/*Scroll bar nav*/
-#detailed-pricing::-webkit-scrollbar {
-    width: 1em;
-}
+    <style>
+        /*Scroll bar nav*/
+        #detailed-pricing::-webkit-scrollbar {
+            width: 1em;
+        }
 
-/* Track */
-#detailed-pricing::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        /* Track */
+        #detailed-pricing::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
 
-}
+        }
 
-/* Handle */
-#detailed-pricing::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-}
-  </style>
+        /* Handle */
+        #detailed-pricing::-webkit-scrollbar-thumb {
+            margin-top: 5px;
+            background-color: darkgrey;
+            outline: 0.5px solid slategrey;
+        }
+    </style>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
-    </script> 
+    </script>
 </head>
 
 <body class="font-[Montserrat] mesh-bg-white dark:mesh-bg duration-500">
@@ -134,7 +135,7 @@ radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.221) 0px, transparent 50%);
                         class="text-3xl mr-3 text-black dark:text-white cursor-pointer lg:hidden toggle-btn"></ion-icon>
                 </div>
         </header>
-
+        <!--dont remove-->
         <section class="h-[90%] hidden" id="home">
             <div class="flex overflow-hidden md:items-center dark:text-white text-black md:pt-[200px] pt-[150px]">
                 <div class="text-4xl sm:text-5xl ml-2 px-8 mb-5 md:text-7xl lg:text-8xl font-bold" data-scroll="">
@@ -150,180 +151,225 @@ radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.221) 0px, transparent 50%);
                     See our services
                 </a>
             </div>
-
         </section>
-<div id="detailed-pricing" class="w-full px-2 overflow-x-auto mt-[130px]">
-    <div class="overflow-hidden min-w-max border border-gray-700 dark:border-white rounded-xl">
-        <div class="grid grid-cols-5 p-4 text-xs md:text-sm font-medium text-gray-900 bg-gray-100 border-t border-b border-gray-700 gap-x-16 dark:bg-gray-800 dark:text-white">
-            <div class="flex items-center">Features</div>
-            <div>Free</div>
-            <div>Venture</div>
-            <div>Business</div>
-            <div>Unlimited</div>
+        <!--*-->
+
+
+        <div id="detailed-pricing" class="w-full px-2 overflow-x-auto mt-[100px]">
+            <div class="overflow-hidden min-w-max border border-gray-700 dark:border-white rounded-xl">
+                <div
+                    class="grid grid-cols-5 p-4 text-xs md:text-sm font-medium text-gray-900 bg-gray-100 border-t border-b border-gray-700 gap-x-16 dark:bg-gray-800 dark:text-white">
+                    <div class="flex items-center">Features</div>
+                    <div>Free</div>
+                    <div>Venture</div>
+                    <div>Business</div>
+                    <div>Unlimited</div>
+
+                </div>
+                <div
+                    class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
+                    <div class="text-gray-500 dark:text-gray-400 sm:sticky">Monthly price</div>
+                    <div class="dark:text-white">
+                        ₹ 0
+                    </div>
+                    <div class="dark:text-white">
+                        ₹ 889
+                    </div>
+                    <div class="dark:text-white">
+                        ₹ 1649
+                    </div>
+                    <div class="dark:text-white">
+                        ₹ 4990
+                    </div>
+
+                </div>
+                <div
+                    class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
+                    <div class="text-gray-500 dark:text-gray-400">Monthly price, paid annualy</div>
+                    <div class="dark:text-white">
+                        ₹ 0
+                    </div>
+                    <div class="dark:text-white">
+                        ₹ 666.58
+                    </div>
+                    <div class="dark:text-white">
+                        ₹ 1199.92
+                    </div>
+                    <div class="dark:text-white">
+                        ₹ 4000
+                    </div>
+
+                </div>
+                <div
+                    class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
+                    <div class="text-gray-500 dark:text-gray-400">Maximum products</div>
+                    <div class="dark:text-white">
+                        5
+                    </div>
+                    <div class="dark:text-white">
+                        100
+                    </div>
+                    <div class="dark:text-white">
+                        2500
+                    </div>
+                    <div class="dark:text-white">
+                        Unlimited
+                    </div>
+
+                </div>
+                <div
+                    class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
+                    <div class="text-gray-500 dark:text-gray-400">Discount Coupons</div>
+                    <div>
+                        <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5.917 5.724 10.5 15 1.5" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5.917 5.724 10.5 15 1.5" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5.917 5.724 10.5 15 1.5" />
+                        </svg>
+                    </div>
+
+                </div>
+                <div
+                    class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
+                    <div class="text-gray-500 dark:text-gray-400">Inventory management </div>
+                    <div>
+                        <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5.917 5.724 10.5 15 1.5" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5.917 5.724 10.5 15 1.5" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5.917 5.724 10.5 15 1.5" />
+                        </svg>
+                    </div>
+                </div>
+                <div
+                    class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
+                    <div class="text-gray-500 dark:text-gray-400">Advanced SEO tools</div>
+                    <div>
+                        <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5.917 5.724 10.5 15 1.5" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5.917 5.724 10.5 15 1.5" />
+                        </svg>
+                    </div>
+                </div>
+                <div
+                    class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
+                    <div class="text-gray-500 dark:text-gray-400">Product variations</div>
+                    <div>
+                        <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5.917 5.724 10.5 15 1.5" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 16 12">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5.917 5.724 10.5 15 1.5" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="my-5 mx-5">
+            <p class="text-2xl font-bold dark:text-white w-full text-left lg:text-center py-4">There will be 70%
+                discount for the first month and 25% discount for the first year if paid annually</p>
+
+            <p class="text-md dark:text-white w-full text-left lg:text-center py-1">Note: All these prices are
+                additional to making fee and making fee is sought to be taken only once</p>
 
         </div>
-        <div class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
-            <div class="text-gray-500 dark:text-gray-400 sm:sticky">Monthly price</div>
-            <div class="dark:text-white">
-                ₹ 0
-            </div>
-            <div class="dark:text-white">
-                ₹ 889	
-            </div>
-            <div class="dark:text-white">
-                ₹ 1649	
-            </div>
-            <div class="dark:text-white">
-                ₹ 4990
-            </div>
 
-        </div>
-        <div class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
-            <div class="text-gray-500 dark:text-gray-400">Monthly price, paid annualy</div>
-            <div class="dark:text-white">
-                ₹ 0
-            </div>
-            <div class="dark:text-white">
-                ₹ 666.58
-            </div>
-            <div class="dark:text-white">
-                ₹ 1199.92	
-            </div>
-            <div class="dark:text-white">
-                ₹ 4000
-            </div>
 
-        </div>
-        <div class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
-            <div class="text-gray-500 dark:text-gray-400">Maximum products</div>
-            <div class="dark:text-white">
-                5
-            </div>
-            <div class="dark:text-white">
-                100
-            </div>
-            <div class="dark:text-white">
-                2500	
-            </div>
-            <div class="dark:text-white">
-                Unlimited
-            </div>
-
-        </div>
-        <div class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
-            <div class="text-gray-500 dark:text-gray-400">Discount Coupons</div>
-            <div>
-                <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                </svg>
-            </div>
-            <div>
-                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                </svg>
-            </div>
-
-            <div>
-                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                </svg>
-            </div>
-
-            <div>
-                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                </svg>
-            </div>
-
-        </div>
-        <div class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
-            <div class="text-gray-500 dark:text-gray-400">Inventory management	</div>
-            <div>
-                <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                </svg>
-            </div>
-            <div>
-                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                </svg>
-            </div>
-            
-            <div>
-                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                </svg>
-            </div>
-
-                        <div>
-                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                </svg>
-            </div>
-        </div>
-        <div class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
-            <div class="text-gray-500 dark:text-gray-400">Advanced SEO tools</div>
-            <div>
-                <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                </svg>
-            </div>
-            <div>
-                <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                </svg>
-            </div>
-            
-            <div>
-                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                </svg>
-            </div>
-
-                        <div>
-                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                </svg>
-            </div>
-        </div>
-        <div class="grid grid-cols-5 px-4 py-5 text-xs md:text-sm text-gray-700 border-b border-gray-700 gap-x-16">
-            <div class="text-gray-500 dark:text-gray-400">Product variations</div>
-            <div>
-                <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                </svg>
-            </div>
-            <div>
-                <svg class="w-3 h-3 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                </svg>
-            </div>
-            
-            <div>
-                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                </svg>
-            </div>
-
-                        <div>
-                <svg class="w-3 h-3 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                </svg>
-            </div>
-        </div>
 
     </div>
-</div>
-<div class="my-5 mx-5">
-    <p class="text-xl font-bold dark:text-white w-full text-left lg:text-center py-4">There will be 70% discount for the first month and 25% discount for the first year if paid annually</p> 
-
-<p class="text-xl font-bold dark:text-white w-full text-left lg:text-center py-4">Note: All these prices are additional to making fee and making fee is sought to be taken only once</p>
-
-</div>
-      
-
-
-    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 

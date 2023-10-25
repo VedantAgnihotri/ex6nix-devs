@@ -84,9 +84,6 @@ const observer = new IntersectionObserver(entries => {
       }
     }
       // We're not intersecting, so remove the class!
-      member_1.classList.remove('animate__animated','animate__fadeInLeft');
-      member_2.classList.remove('animate__animated','animate__fadeInRight');
-
     });
   });
   
@@ -123,3 +120,14 @@ const observer = new IntersectionObserver(entries => {
     )
     .catch((err) => console.log(err))
  }
+
+ let $root = $('html, body');
+ $('a[href^="#"]').click(function() {
+     let href = $.attr(this, 'href');
+     $root.animate({
+       scrollTop: $(href).offset().top
+     }, 500, function() {
+       window.location.hash = href;
+     });
+     return false;
+   });
