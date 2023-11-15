@@ -144,6 +144,7 @@ const observer = new IntersectionObserver(entries => {
            if(top >= offset && top < offset + height) {
                nav_links.forEach(links => {
                    links.classList.remove('active', "text-yellow-400","dark:text-yellow-500");
+                   links.classList.add("text-black","dark:text-white")
                    document.querySelector('header nav a[href*=' + id + ']').classList.add('active', "text-yellow-400","dark:text-yellow-500");                   
                });
            };
