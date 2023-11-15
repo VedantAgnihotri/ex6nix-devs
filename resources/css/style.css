@@ -32,6 +32,7 @@ background-attachment: fixed;
     ::-webkit-scrollbar {
         width: 8px;
         background: transparent;
+        display: none;
       }
       
       /* Track */
