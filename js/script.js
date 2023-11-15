@@ -141,14 +141,13 @@ const observer = new IntersectionObserver(entries => {
            let offset = sec.offsetTop - 150;
            let height = sec.offsetHeight;
            let id = sec.getAttribute('id');
+           
            if(top >= offset && top < offset + height) {
                nav_links.forEach(links => {
-                   links.classList.remove('active', "text-yellow-400","dark:text-yellow-500");
+                   links.classList.remove('active', "text-yellow-500","dark:text-yellow-400");
                    links.classList.add("text-black","dark:text-white")
-                   document.querySelector('header nav a[href*=' + id + ']').classList.add('active', "text-yellow-400","dark:text-yellow-500");                   
+                   document.querySelector('header nav a[href*=' + id + ']').classList.add('active', "text-yellow-500","dark:text-yellow-400");                   
                });
            };
        });
    };
-
-
