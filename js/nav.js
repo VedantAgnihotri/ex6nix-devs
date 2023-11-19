@@ -2,7 +2,11 @@ const navLinks = document.querySelector('.nav-links')
 const togglebtn= document.querySelector('.toggle-btn')
         function onToggleMenu(e){
             e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('hidden')
+            navLinks.classList.remove('animate__faster')
+            navLinks.classList.toggle('animate__slideOutUp')
+            navLinks.classList.toggle('animate__slideInDown')
+
+
 
         }
 

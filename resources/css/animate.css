@@ -91,10 +91,8 @@
  }
 
  .animate__animated.animate__faster {
-     -webkit-animation-duration: .5s;
-     animation-duration: .5s;
-     -webkit-animation-duration: calc(var(--animate-duration)/2);
-     animation-duration: calc(var(--animate-duration)/2)
+     -webkit-animation-duration: 0s;
+     animation-duration: 0s;
  }
 
  .animate__animated.animate__fast {
@@ -4386,7 +4384,9 @@
      }
  }
 
- .animate__slideOutUp {
-     -webkit-animation-name: slideOutUp;
-     animation-name: slideOutUp
- }
+@media screen and (max-width: 1024px){
+    .animate__slideOutUp {
+        -webkit-animation-name: slideOutUp;
+        animation-name: slideOutUp
+    }
+}
