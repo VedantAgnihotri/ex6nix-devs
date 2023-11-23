@@ -1,3 +1,12 @@
+
+var typed = new Typed(".typing", {
+  strings: ["Business.", "Portfolio.", "Store.", "Resume."],
+  typeSpeed: 100,
+  backSpeed: 80,
+  loop: true
+});
+
+
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       const member_1 = entry.target.querySelector('.member-1');
