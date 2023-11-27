@@ -22,13 +22,9 @@ background-attachment: fixed;
     html, body {
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
       }
       
-      body, html{
-        overflow-x: hidden;
-
-      }
-
     ::-webkit-scrollbar {
         width: 8px;
         background: transparent;
@@ -124,3 +120,4 @@ background-attachment: fixed;
       .text {
         color: white;
       }
+

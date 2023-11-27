@@ -29,7 +29,7 @@ const observer = new IntersectionObserver(entries => {
     window.open("https://rrs12.github.io/matica/");
  } 
  function digimics(){
-    window.open("https://rrs12.github.io/digimics/");
+    window.open("https://thedigitaldynamics.co.in");
  } 
 
  let $root = $('html, body');
