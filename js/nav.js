@@ -9,11 +9,14 @@ const togglebtn= document.querySelector('.toggle-btn')
 
 
         }
-
 const theme_btn = document.querySelector('.theme_btn')
 var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
+if(localStorage.getItem('color-theme')===null){
+    localStorage.setItem('color-theme', 'dark');
+
+}
 
 // Change the icons inside the button based on previous settings
 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
