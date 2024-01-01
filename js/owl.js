@@ -4,16 +4,17 @@ $('#owl-demo').owlCarousel({
     nav: false,
     dots: false,
     autoplay: true,
-    autoplayTimeout: 3000,
     autoplayHoverPause: true,
     responsive : {
         0 : {
-            items : 1
-           
+            items : 1,
+            autoplayTimeout: 3000,
+
         },
         917 : {
             items : 2,
-            autoplay:false
-           
+            slideBy:2,
+            autoplayTimeout: 6000,
+
         }
     }})

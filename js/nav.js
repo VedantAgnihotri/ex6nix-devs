@@ -15,7 +15,6 @@ var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
 if(localStorage.getItem('color-theme')===null){
     localStorage.setItem('color-theme', 'dark');
-
 }
 
 // Change the icons inside the button based on previous settings

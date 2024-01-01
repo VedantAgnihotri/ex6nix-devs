@@ -29,8 +29,16 @@ const observer = new IntersectionObserver(entries => {
     window.open("https://rrs12.github.io/matica/");
  } 
  function digimics(){
-    window.open("https://thedigitaldynamics.co.in");
+    window.open("thedigitaldynamics.co.in");
  } 
+
+ function colub(){
+  window.open("https://colub.vercel.app");
+} 
+
+function luio(){
+  window.open("https://luio.vercel.app");
+} 
 
  let $root = $('html, body');
  $('a[href^="#"]').click(function() {
