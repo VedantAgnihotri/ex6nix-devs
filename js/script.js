@@ -66,7 +66,8 @@ function luio(){
                    links.classList.remove('active', "text-yellow-500","dark:text-yellow-400");
                    links.classList.add("text-black","dark:text-white")
                    document.querySelector('header nav a[href*=' + id + ']').classList.add('active', "text-yellow-500","dark:text-yellow-400");                   
-               });
+                   document.querySelector('header nav a[href*=' + id + ']').classList.remove("text-black","dark:text-white")   
+                  });
            };
        });
    };
