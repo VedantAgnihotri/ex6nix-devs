@@ -1,123 +1,135 @@
-.mesh-bg{
-background-color:hsla(0,0%,0%,1);
-background-image:
-radial-gradient(at 90% 77%, hsla(52,98%,77%,0.1) 0px, transparent 50%),
-radial-gradient(at 3% 23%, hsla(50,98%,64%,0.1) 0px, transparent 50%);
-background-repeat: no-repeat;
-background-attachment: fixed;
+.mesh-bg {
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image:
+    radial-gradient(at 90% 77%, hsla(52, 98%, 77%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.1) 0px, transparent 50%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
 }
 
-.mesh-bg-white{
-    background-color:white;
-    background-image:
-    radial-gradient(at 90% 77%, hsla(52,98%,77%,0.05) 0px, transparent 50%),
-    radial-gradient(at 3% 23%, hsla(50,98%,64%,0.05) 0px, transparent 50%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  
-    
-    }
-
-    html, body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-      }
-      
-    ::-webkit-scrollbar {
-        width: 8px;
-        background: transparent;
-        display: none;
-      }
-      
-      /* Track */
-      ::-webkit-scrollbar-track {
-        background: transparent;
-        display: none;
-
-      }
-      
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: #facc15;
-        border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-corner{
-        border-radius: 10px;
-      }
+.mesh-bg-white {
+  background-color: white;
+  background-image:
+    radial-gradient(at 90% 77%, hsla(52, 98%, 77%, 0.05) 0px, transparent 50%),
+    radial-gradient(at 3% 23%, hsla(50, 98%, 64%, 0.05) 0px, transparent 50%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
 
-      .horizontalScroll {
-        -webkit-transform-origin: right top;
-                transform-origin: right top;
-        -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0);
-                transform: rotate(-90deg) translate3d(0, -100vh, 0);
-      }
-      .horizontalScroll > * {
-        -webkit-transform-origin: left top;
-                transform-origin: left top;
-        -webkit-transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
-                transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
-      }
+}
 
-      .horizontalScroll::-webkit-scrollbar-thumb{
-        display: none;
-      }
-      .item {
-        width: calc(100vh - 60px);
-        height: calc(100vh - 60px);
-        background: #FDFFFC;
-        position: relative;
-      }
-      .item:not(:first-child) {
-        margin-top: 30px;
-      }
-      .item .bg {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: no-repeat center center / cover;
-        opacity: .8;
-        background-blend-mode: luminosity;
-      }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-      .container {
-        position: relative;  
-      }
-      
-      .image {
-        opacity: 1;
-        display: block;
-        width: 100%;
-        height: auto;
-        transition: .5s ease;
-        backface-visibility: hidden;
-      }
-      
-      .middle {
-        transition: .5s ease;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        text-align: center;
-      }
-      
-      .container:hover .image {
-        opacity: 0.2;
-      }
-      
-      .container:hover .middle {
-        opacity: 1;
-      }
-      
-      .text {
-        color: white;
-      }
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+  display: none;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  display: none;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #facc15;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner {
+  border-radius: 10px;
+}
+
+
+.horizontalScroll {
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0);
+  transform: rotate(-90deg) translate3d(0, -100vh, 0);
+}
+
+.horizontalScroll>* {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+  transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+}
+
+.horizontalScroll::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.item {
+  width: calc(100vh - 60px);
+  height: calc(100vh - 60px);
+  background: #FDFFFC;
+  position: relative;
+}
+
+.item:not(:first-child) {
+  margin-top: 30px;
+}
+
+.item .bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: no-repeat center center / cover;
+  opacity: .8;
+  background-blend-mode: luminosity;
+}
+
+.container {
+  position: relative;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.2;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+}
+
+.image-work:hover {
+  padding: 8px;
+  background: hsla(56, 88%, 72%, 1);
+  background: linear-gradient(45deg, hsla(56, 88%, 72%, 1) 20%, hsla(188, 97%, 56%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F6EE78", endColorstr="#20DFFC", GradientType=1);
+  border: none;
+}
